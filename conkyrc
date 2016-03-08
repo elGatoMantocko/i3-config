@@ -9,7 +9,7 @@ pad_percents	  3
 override_utf8_locale yes
 
 TEXT
-,[{"full_text": " CPU Temp: $acpitemp°C [$cpu%] ","color": "\#DC322F"},
+,[{"full_text": " CPU: $acpitemp°C [$cpu%] ","color": "\#DC322F"},
   {"full_text": " Mem Usage: [$membar] ", "color":"\#B58900"},
   ${if_up wlan0}{"full_text": " Wireless LAN: ${wireless_essid wlan0} [${wireless_link_qual_perc wlan0}%] ","color":"\#33CC99"},
   $else${if_up ppp0}{"full_text": " Wireless LAN: orange ","color":"\#33CC99"},
