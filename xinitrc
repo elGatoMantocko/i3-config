@@ -42,12 +42,6 @@ dunst -config ~/.i3/dunstrc &
 # disks automounting
 udiskie &
 
-# terminal server
-urxvtd &
-
-# dropbox
-[ -e /usr/bin/dropboxd ] && /usr/bin/dropboxd &
-
 # gpg agent
 export SSH_AUTH_SOCK="${HOME}/.gnupg/S.gpg-agent.ssh"
 gpg-connect-agent updatestartuptty /bye
