@@ -31,6 +31,7 @@ bindsym $mod+Return exec xfce4-terminal
 bindsym $mod+c kill
 
 # start dmenu (a program launcher)
+# bindsym $mod+p exec --no-startup-id ~/.i3/rofi.sh
 bindsym $mod+p exec "dmenu_run -nb black -p run"
 
 bindsym $mod+Shift+p exec "~/.bin/pass-autotype-dmenu"
