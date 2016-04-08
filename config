@@ -37,7 +37,7 @@ bindsym $mod+p exec "dmenu_run -nb black -p run"
 bindsym $mod+Shift+p exec "~/.bin/pass-autotype-dmenu"
 
 # screen lock
-bindsym Control+$mod+l exec slimlock
+bindsym Control+$mod+l exec lock
 
 # change focus
 bindsym $mod+h focus left
