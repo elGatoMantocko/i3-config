@@ -1,3 +1,4 @@
+#!/usr/bin/conky
 background        no
 out_to_console 	  yes
 out_to_x	  no
@@ -15,7 +16,7 @@ TEXT
   $else${if_up ppp0}{"full_text": " Wireless LAN: orange ","color":"\#33CC99"},
   $else${if_up eth0}{"full_text": " Wireless LAN: eth0 ","color":"\#33CC99"},
   $else{"full_text": " ≈ no connection ","color":"\#33CC99"},$endif$endif$endif
-  {"full_text": " Battery: [$battery_percent%] ","color":"\#9933CC"},
+  {"full_text": " Battery: [${battery_percent BAT1}%] [${battery_percent BAT0}%]","color":"\#9933CC"},
   {"full_text": " Volume: [$mixer%] ", "color":"\#268BD2"},
   {"full_text": " ${time WW%V.%u, %a %d %b}"},
   {"full_text": " ${time %I:%M} "}
