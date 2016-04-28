@@ -1,3 +1,3 @@
 #!/bin/bash
-rofi -modi "run,drun" -show drun -lines 4 -eh 2 -width 1920 -padding 460 -location 0 -opacity "85" -bw 0 -bc "#202020" -bg "#202020" -fg "#FFFFFF" -hlbg "#8FA388" -hlfg "#FFFFFF"
+rofi -show run -width 2560 -fg "#B0E670" -bg "#14161F" -hlfg "#14161F" -hlbg "#B0E670" -bc "#14161F" -location 0 -lines 19 -bw 0 -font "MonacoB 16" -padding 900 -separator-style none -opacity 80
 

@@ -38,4 +38,11 @@ Xft.rgba      : rgb
 URxvt.fading    : 50
 URxvt.fadeColor : #29303a
 
+!Rofi
+rofi.color-enabled: true
+rofi.color-window: argb:b5000000, argb:b5000000, 0
+rofi.color-normal: argb:00000000, white, argb:00000000, argb:b5586e75, white
+rofi.hide-scrollbar: true
+rofi.separator-style: none
+
 #include "dark.xresources"

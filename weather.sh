@@ -13,4 +13,4 @@ weather=$(curl -s http://api.openweathermap.org/data/2.5/weather\?id=${cityid}\&
 temperature=$(printf '%s' $(echo $weather | jq '.main.temp'))
 condition=$(echo $weather | jq -r '.weather[0].main')
 
-echo $temperature °$unit
+echo $condition $temperature °$unit

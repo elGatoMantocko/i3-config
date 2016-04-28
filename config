@@ -25,14 +25,16 @@ client.unfocused          $gray2   $gray2   #FFFFFF   #000000
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+c kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+p exec --no-startup-id ~/.i3/rofi.sh
-bindsym $mod+p exec "dmenu_run -nb black -p run"
+# bindsym $mod+p exec "dmenu_run -nb black -p run"
+bindsym $mod+p exec --no-startup-id rofi -show run
+bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
 
 bindsym $mod+Shift+p exec "~/.bin/pass-autotype-dmenu"
 
@@ -122,8 +124,8 @@ mode "resize" {
 bindsym $mod+s mode "resize"
 
 # multimedia keys
-bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '3%+'"
-bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '1%-'"
+bindsym XF86AudioRaiseVolume exec "amixer -D pulse sset Master '5%+'"
+bindsym XF86AudioLowerVolume exec "amixer -D pulse sset Master '5%-'"
 bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 bindsym XF86AudioMicMute exec "amixer -D pulse sset Capture toggle"
 
@@ -139,7 +141,7 @@ bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/Touch
 
 bindsym XF86Display exec "arandr"
 
-bindsym $mod+a exec "xfce4-terminal -e alsamixer"
+bindsym $mod+a exec "gnome-terminal -e alsamixer"
 bindsym $mod+Shift+a exec "pavucontrol"
 bindsym $mod+Shift+g exec "google-chrome"
 
