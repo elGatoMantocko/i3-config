@@ -26,7 +26,7 @@ TEXT
   {"full_text": " Battery: [${battery_percent BAT1}%] [${battery_percent BAT0}%]","color":"\#9933CC"},
   {
 	  "full_text": " Volume: ${exec ~/.i3/volumelevel.sh}% ",
-	  "color": ${if_empty ${exec ~/.i3/volumelevel.sh | grep 'Mute'}}"\#cccccc"${else}"\#ffff00"${endif}
+	  "color": ${if_empty ${exec ~/.i3/ismute.sh | grep yes}}"\#cccccc"${else}"\#ffff00"${endif}
   },
   {"full_text": " ${time %u.%V, %a %b %d}"},
   {"full_text": " ${time %I:%M} "}
