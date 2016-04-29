@@ -1,3 +1,4 @@
+#!/bin/bash
 # User configurables below:
 # Uncomment this line for fahrenheit:
 metric='imperial' && unit='F'
@@ -6,8 +7,12 @@ metric='imperial' && unit='F'
 
 # First, geolocate our IP:
 ipinfo=$(curl -s ipinfo.io)
+
+lat=$(printf '%.1f' `expr $(echo $ipinfo | jq -r '.loc') : '^\(.*\),'`)
+long=$(printf '%.1f' `expr $(echo $ipinfo | jq -r '.loc') : '^.*[,]\(.*\)$'`)
+
 city=$(echo $ipinfo | jq -r '.city')
-cityid=$(grep -m 1 "$city" ~/.i3/city.list.us.json | jq -r '._id')
+cityid=$(grep "\($city\|$lat\|$long\)" ~/.i3/city.list.us.json | jq -r '._id')
 
 weather=$(curl -s http://api.openweathermap.org/data/2.5/weather\?id=${cityid}\&units\=${metric}\&APPID\=$(cat ~/.i3/appid.txt))
 temperature=$(printf '%s' $(echo $weather | jq '.main.temp'))
