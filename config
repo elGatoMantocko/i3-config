@@ -34,9 +34,8 @@ bindsym $mod+c kill
 # bindsym $mod+p exec --no-startup-id ~/.i3/rofi.sh
 # bindsym $mod+p exec "dmenu_run -nb black -p run"
 bindsym $mod+p exec --no-startup-id rofi -show run
+bindsym $mod+Shift+p exec --no-startup-id rofi -show window
 bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
-
-bindsym $mod+Shift+p exec "~/.bin/pass-autotype-dmenu"
 
 # screen lock
 bindsym Control+$mod+l exec lock
