@@ -146,7 +146,7 @@ bindsym $mod+Shift+g exec "google-chrome"
 
 bar {
         position top
-        status_command ~/.i3/bin/conky-wrapper
+        status_command ~/dotfiles/conky/conky-wrapper
         strip_workspace_numbers yes
         colors {
                 statusline #AAAAAA
