@@ -1,6 +1,6 @@
 smart_gaps on
 smart_borders on
-gaps inner 7
+gaps inner 5
 
 smart_borders on
 
@@ -35,6 +35,9 @@ bindsym $mod+c kill
 bindsym $mod+p exec --no-startup-id rofi -show run
 bindsym $mod+Shift+p exec --no-startup-id rofi -show window
 bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
+
+# restart dunst
+bindsym $mod+Shift+d exec killall dunst && exec notify-send 'restart dunst'
 
 # screen lock
 bindsym Control+$mod+l exec lock
