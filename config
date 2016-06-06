@@ -32,9 +32,9 @@ bindsym $mod+c kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+p exec "dmenu_run -nb black -p run"
-bindsym $mod+p exec --no-startup-id rofi -show run -terminal xfce4-terminal -fullscreen -padding 175 -bw 0 -font "Droid Sans Mono for Powerline 14" -opacity "90"
-bindsym $mod+Shift+p exec --no-startup-id rofi -show window -terminal xfce4-terminal -fullscreen -padding 175 -bw 0 -font "Droid Sans Mono for Powerline 14" -opacity "90"
-bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh -terminal xfce4-terminal -fullscreen -padding 175 -bw 0 -font "Droid Sans Mono for Powerline 14" -opacity "90"
+bindsym $mod+p exec --no-startup-id rofi -show run -terminal xfce4-terminal -fullscreen -padding 175 -bw 0 -font "Droid Sans Mono for Powerline 14" -opacity "90" -fuzzy
+bindsym $mod+Shift+p exec --no-startup-id rofi -show window -terminal xfce4-terminal -fullscreen -padding 175 -bw 0 -font "Droid Sans Mono for Powerline 14" -opacity "90" -fuzzy
+bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh -terminal xfce4-terminal -fullscreen -padding 175 -bw 0 -font "Droid Sans Mono for Powerline 14" -opacity "90" -fuzzy
 
 # restart dunst
 bindsym $mod+Shift+d exec killall dunst && exec notify-send 'restart dunst'
