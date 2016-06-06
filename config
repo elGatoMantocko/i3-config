@@ -86,7 +86,7 @@ bindsym $mod+6 workspace back_and_forth
 # switch to workspace
 bindsym $mod+q workspace 1: 
 bindsym $mod+w workspace 2: 
-bindsym $mod+e workspace 3: e
+bindsym $mod+e workspace 3: 
 bindsym $mod+r workspace 4: r
 bindsym $mod+t workspace 5: t
 bindsym $mod+y workspace 6: y
@@ -97,7 +97,7 @@ bindsym $mod+o workspace 9: 
 # move focused container to workspace
 bindsym $mod+Shift+q move container to workspace 1: 
 bindsym $mod+Shift+w move container to workspace 2: 
-bindsym $mod+Shift+e move container to workspace 3: e
+bindsym $mod+Shift+e move container to workspace 3: 
 bindsym $mod+Shift+r move container to workspace 4: r
 bindsym $mod+Shift+t move container to workspace 5: t
 bindsym $mod+Shift+y move container to workspace 6: y
