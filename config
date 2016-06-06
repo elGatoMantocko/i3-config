@@ -6,7 +6,7 @@ smart_borders on
 
 set $mod Mod4
 
-font SFNS 11px
+font pango:Droid Sans Mono for Powerline 11
 
 new_window pixel 3
 focus_follows_mouse  no
@@ -25,16 +25,16 @@ client.unfocused          $gray2   $gray2   #FFFFFF   #000000
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+c kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+p exec "dmenu_run -nb black -p run"
-bindsym $mod+p exec --no-startup-id rofi -show run
-bindsym $mod+Shift+p exec --no-startup-id rofi -show window
-bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh
+bindsym $mod+p exec --no-startup-id rofi -show run -terminal xfce4-terminal -fullscreen -padding 175 -bw 0 -font "Droid Sans Mono for Powerline 14" -opacity "90"
+bindsym $mod+Shift+p exec --no-startup-id rofi -show window -terminal xfce4-terminal -fullscreen -padding 175 -bw 0 -font "Droid Sans Mono for Powerline 14" -opacity "90"
+bindsym $mod+Shift+s exec --no-startup-id rofi -show ssh -terminal xfce4-terminal -fullscreen -padding 175 -bw 0 -font "Droid Sans Mono for Powerline 14" -opacity "90"
 
 # restart dunst
 bindsym $mod+Shift+d exec killall dunst && exec notify-send 'restart dunst'
@@ -135,26 +135,28 @@ bindsym XF86AudioStop exec "~/.bin/player stop"
 bindsym XF86AudioNext exec "~/.bin/player next"
 bindsym XF86AudioPrev exec "~/.bin/player previous"
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10     # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10   # decrease screen brightness
 
 bindsym XF86TouchpadToggle exec "synclient TouchpadOff=$(synclient | awk '/TouchpadOff/ {print ($3+1)%2}')"
 
 bindsym XF86Display exec "arandr"
 
-bindsym $mod+a exec "gnome-terminal -e alsamixer"
+bindsym $mod+a exec "xfce4-terminal -e alsamixer"
 bindsym $mod+Shift+a exec "pavucontrol"
 bindsym $mod+Shift+g exec "google-chrome"
 
 bar {
-        position top
-        status_command ~/dotfiles/conky/conky-wrapper
-        strip_workspace_numbers yes
-        colors {
-                statusline #AAAAAA
-                background $gray2
-                focused_workspace $gray2 $gray2 #FFFFFF
-                inactive_workspace $gray1 $gray1 #AAAAAA
-        }
+  position top
+  font pango:Droid Sans Mono for Powerline 10
+  # status_command i3status
+  status_command ~/.dotfiles/conky/conky-wrapper
+  strip_workspace_numbers yes
+  colors {
+    statusline #AAAAAA
+    background $gray2
+    focused_workspace $gray2 $gray2 #FFFFFF
+    inactive_workspace $gray1 $gray1 #AAAAAA
+  }
 }
 
