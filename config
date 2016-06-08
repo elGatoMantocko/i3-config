@@ -90,7 +90,7 @@ bindsym $mod+e workspace 3: 
 bindsym $mod+r workspace 4: r
 bindsym $mod+t workspace 5: t
 bindsym $mod+y workspace 6: y
-bindsym $mod+u workspace 7: u
+bindsym $mod+u workspace 7: 
 bindsym $mod+i workspace 8: 
 bindsym $mod+o workspace 9: 
 
@@ -101,7 +101,7 @@ bindsym $mod+Shift+e move container to workspace 3: 
 bindsym $mod+Shift+r move container to workspace 4: r
 bindsym $mod+Shift+t move container to workspace 5: t
 bindsym $mod+Shift+y move container to workspace 6: y
-bindsym $mod+Shift+u move container to workspace 7: u
+bindsym $mod+Shift+u move container to workspace 7: 
 bindsym $mod+Shift+i move container to workspace 8: 
 bindsym $mod+Shift+o move container to workspace 9: 
 
