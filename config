@@ -146,17 +146,17 @@ bindsym $mod+a exec "xfce4-terminal -e alsamixer"
 bindsym $mod+Shift+a exec "pavucontrol"
 bindsym $mod+Shift+g exec "google-chrome"
 
-bar {
-  position top
-  font pango:Droid Sans Mono for Powerline, Awesome 10
-  # status_command i3status
-  status_command ~/.dotfiles/conky/conky-wrapper
-  strip_workspace_numbers yes
-  colors {
-    statusline #AAAAAA
-    background $gray2
-    focused_workspace $gray2 $gray2 #FFFFFF
-    inactive_workspace $gray1 $gray1 #AAAAAA
-  }
-}
+# bar {
+  # position top
+  # font pango:Droid Sans Mono for Powerline, Awesome 10
+  # # status_command i3status
+  # status_command ~/.dotfiles/conky/conky-wrapper
+  # strip_workspace_numbers yes
+  # colors {
+    # statusline #AAAAAA
+    # background $gray2
+    # focused_workspace $gray2 $gray2 #FFFFFF
+    # inactive_workspace $gray1 $gray1 #AAAAAA
+  # }
+# }
 
